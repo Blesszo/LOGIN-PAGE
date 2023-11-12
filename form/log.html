@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="./icons/all.min.css">
+    <link rel="stylesheet" href="log.css">
+    <script src="./log.js" defer></script>
+</head>
+<body>
+    <section>
+        <div class="left">
+            <div>
+                <aside>
+                    <span><i class="fa-solid fa-rocket"></i></span>
+                   <h2>WELCOME</h2>
+                </aside>
+                <aside>
+                    <p>Do You Wanna Know Which meal Is Best For You?</p>
+                    <a href="#sign_up" id="gts">Get Started <i class="fa-solid fa-chevron-right"></i></a>
+                </aside>
+            </div>
+        </div>
+        <div class="right">
+            <div class="t">
+                <div class="slider">
+
+                    <a href="#sign_in" class="on" title="login to your account" id="ll">login</a>
+                    <a href="#sign_up" title="create an account" id="ss">sign up</a>
+
+                </div>
+            </div>
+            <div class="d">
+                <div class="log" id="sign_in">
+                    <h1>welcome back</h1>
+                    <form action="#" method="post">
+                        <div>
+                            <input type="text" required placeholder="Username">
+                            <input type="password" required placeholder="Password" class="pa">
+                            <span id="show"><i class="far fa-eye-slash" id="ey"></i></span>
+                        </div>
+
+                        <input type="submit" value="login" >
+                        
+                    </form>
+                    <button>Forgot Password</button>
+                    <p>Don't Have An Account?, <a href="#sign_up" id="acr">Sign Up Here</a></p>
+                    <div class="media">
+                        <a href="" style="--bk:rgb(53, 118, 246);"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="" style="--bk:rgb(3, 162, 51);"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="" style="--bk:#000;"><i class="fa-brands fa-github"></i></a>
+                        <a href="" style="--bk:rgb(255, 111, 49);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" style="--bk:rgb(96, 181, 255);"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="sign" id="sign_up">
+                    <h1>Create An Account</h1>
+                    <form action="#" method="post">
+                        <div class="f">
+                            <input type="text" required placeholder="Name" id="sign_up_name">
+                            <input type="username" required placeholder="Username" id="sign_up_username">
+                        </div>
+                        <input type="email" required placeholder="Email" id="sign_up_email">
+                        <div class="l">
+                            <input type="password" required placeholder="Password" id="creat_pass1" class="pa">
+                            <span id="show"><i class="far fa-eye-slash" id="ey"></i></span>
+                                <input type="password" required placeholder="Confirm password" id="creat_pass2" class="pa">
+                        </div>
+                        
+                        <input type="submit" value="create account" id="create_account" class="val">
+                        <p>Already Have An Account, <a href="#sign_in" id="as">login here</a></p>
+
+                    </form>
+                    <div class="media" id="s_med">
+                        <a href="" style="--bk:rgb(53, 118, 246);"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="" style="--bk:rgb(3, 162, 51);"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="" style="--bk:#000;"><i class="fa-brands fa-github"></i></a>
+                        <a href="" style="--bk:rgb(255, 111, 49);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" style="--bk:rgb(96, 181, 255);"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dialog id="modal">
+        <img src="img/ok.png" id="m_img">
+        <p id="m_pa">Account created successfully!!!</p>
+    </dialog>
+    <script src="./icons/all.min.js"></script>
+</body>
+</html>

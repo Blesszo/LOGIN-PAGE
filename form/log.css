@@ -1,0 +1,589 @@
+@font-face {
+    font-family: rro;
+    src: url(Rowdies-Light.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main_color: #000;
+    --pass_color: rgb(43, 98, 226, .5);
+    --inp_shad: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    --inv_inp_shad: 0 0 0 2px #f70f0f4d;
+    --v_inp_shad: 0 0 0 2px rgba(9, 196, 77, 0.3);
+    --lin_bg: linear-gradient(90deg, var(--main_color), #000);
+    --lin_bg_s: linear-gradient(180deg, var(--main_color), #000);
+    --btn__shad: 0 3px 4px var(--main_color), inset 0 3px 4px rgba(0, 0, 0, 0.4), inset 0 -2px 6px rgba(0, 0, 0, 0.9);
+    --btn__shad_hov: 0 3px 4px rgba(255, 255, 255, 0.384), inset 0 3px 4px rgba(0, 0, 0, 0.323);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    font-family: system-ui;
+}
+
+section {
+    width: 75%;
+    margin: 5vh 0 0 12.5%;
+    height: 90vh;
+    padding: 4em 3em;
+    display: flex;
+    border-radius: 2px;
+
+    background:linear-gradient(to right,rgb(241, 179, 7),rgb(5, 251, 116));
+}
+img{
+    height: 1000px;
+}
+section .left {
+    width: 30%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    background-image: url(/img/pexels-rajesh-tp-1633578.jpg);
+    background-size: 100%;
+}
+
+section .left div {
+    width: 100%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column;
+}
+
+section .left div aside {
+    width: 100%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column;
+}
+
+section .left div aside span {
+    rotate: -45deg;
+    font-size: 4em;
+    color: #fff;
+}
+
+section .left div aside h2 {
+    font-size: 3em;
+    color: #fff;
+    font-family: rro;
+
+}
+
+section .left>div aside p {
+    font-size: 1.1em;
+    color: rgb(221, 221, 221);
+    text-align: center;
+    font-weight: 500;
+}
+
+section .left>div aside a {
+    font-size: 1.1em;
+    border: 0;
+    background-color: #fff;
+    border-radius: 30px;
+    color: var(--main_color);
+    margin: 10em 0 0 0;
+    padding: .3em .5em;
+    height: 2em;
+    width: 8em;
+    font-weight: 600;
+    transition: .1s linear;
+    box-shadow: 0 2px 4px #00000062;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+
+section .left>div aside a:hover {
+    background: var(--lin_bg);
+    font-weight: 700;
+    box-shadow: var(--btn__shad_hov);
+}
+
+section .left div aside a:hover {
+    color: #fff;
+}
+
+section .left div aside a:active {
+    scale: .95;
+    transform: perspective(200px) rotateY(5deg);
+}
+
+section .right {
+    width: 70%;
+    background: linear-gradient(90deg, transparent, #fff 60%);
+}
+
+section .right .t {
+    width: 100%;
+    display: flex;
+    place-content: flex-end;
+    padding: 1em 2em;
+}
+
+section .right .t .slider {
+    display: flex;
+    background-color: var(--main_color);
+    place-content: space-between;
+    color: #fff;
+    border-radius: 30px;
+    padding: .15em;
+}
+
+section .right .t .slider a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    border-radius: inherit;
+    padding: .4em 2em;
+    transition: .3s ease;
+
+}
+
+section .right .t .slider a.on {
+    color: var(--main_color);
+    background-color: #fff;
+    box-shadow: inset 0 0 10px 1px #000;
+}
+
+section .right .d {
+    height: 85%;
+    margin-left: 10%;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+section .right .d>div {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    background-color: #fff;
+}
+
+section .right .d>div h1 {
+    text-align: center;
+    color: var(--main_color);
+    font-weight: 900;
+    font-family: rro;
+    text-transform: uppercase;
+}
+
+section .right .d>div:last-child {
+    left: 100%;
+}
+
+section .right .d div form {
+    display: flex;
+    flex-direction: column;
+}
+
+section .right .d div form div {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0 1.5em 0;
+    width: 100%;
+}
+
+section .right .d div form div input {
+    border: 0;
+    outline: 0;
+    padding: .55em .7em;
+    box-shadow: var(--inp_shad);
+    width: 49%;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+section .right .d div form div input[type='password'] {
+    padding: .55em 1.5em .55em .4em;
+}
+
+#creat_pass1.succ {
+    box-shadow: 0 0 0 2px var(--pass_color);
+}
+
+#creat_pass2.succ {
+    box-shadow: 0 0 0 2px var(--pass_color);
+}
+
+section .right .d div form div input::-webkit-input-placeholder {
+    transition: .3s linear;
+    font-size: small;
+    color: #000;
+}
+
+section .right .d div form div input:focus::-webkit-input-placeholder {
+    translate: -13em;
+}
+
+section .right .d div form input[type='submit'] {
+    border: 0;
+    padding: .5em 0;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #fff;
+    width: 100%;
+    margin: .5em 0;
+    opacity: .7;
+    background-color: var(--main_color);
+}
+
+section .right .d div form input[type='submit']:hover {
+    opacity: 1;
+}
+
+section .right .d #sign_up form input.success {
+    box-shadow: var(--v_inp_shad);
+}
+
+section .right .d div form p {
+    margin: .5em;
+}
+
+section .right .d div form p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--main_color);
+}
+
+section .right .d div form p a:hover {
+    text-decoration: underline;
+}
+
+section .right .d div button {
+    border: 0;
+    font-weight: 700;
+    padding: .5em;
+    background-color: rgb(198, 0, 0);
+    color: #fff;
+    margin: 1em 0;
+    border-radius: 5px;
+    border: 1px solid rgb(198, 0, 0);
+}
+
+section .right .d div button:hover {
+    background-color: transparent;
+    color: rgb(198, 0, 0);
+}
+
+section .right .d div .media {
+    width: 50%;
+    display: flex;
+    place-content: space-between;
+    margin:7px 0 0px 150px;
+}
+
+section .right .d div .media a {
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 1.5em;
+    place-content: center;
+    color: var(--bk);
+}
+
+section .right .d div .media a:hover {
+    border: 1px solid var(--bk);
+}
+
+section .right .d div form div.f {
+    margin: 1em 0 0 0;
+}
+
+section .right .d div form div.l {
+    margin: .5em 0 1.5em 0;
+}
+
+section .right .d div form input[type='email'] {
+    margin: .6em 0 0 0;
+    border: 0;
+    outline: 0;
+    padding: .6em .7em;
+    border-radius: 5px;
+    box-shadow: var(--inp_shad);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+section .right .d div form input::-webkit-input-placeholder {
+    transition: .3s linear;
+    font-size: small;
+    color: #000;
+}
+
+section .right .d div form input:focus::-webkit-input-placeholder {
+    translate: -13em;
+}
+
+section .right .d div form input[type='email']:focus {
+    box-shadow: var(--inv_inp_shad);
+}
+
+section .right .d div form div {
+    position: relative;
+}
+
+section .right .d div form div input:focus {
+    box-shadow: var(--inv_inp_shad);
+}
+
+section .right .d div form input[type='email'].ok {
+    box-shadow: var(--v_inp_shad);
+}
+
+section .right .d div form div input.ok {
+    box-shadow: var(--v_inp_shad);
+}
+
+#req {
+    background: #fff;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: .6em;
+}
+
+#req h3 {
+    margin-bottom: .4em;
+
+}
+
+#req>span {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+#req>span li {
+    list-style: none;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+#req>span li span {
+    margin: 0 .3em;
+    font-size: .8em;
+}
+
+#req>span li span.ok {
+    color: rgb(0, 200, 100);
+}
+
+#show {
+    margin-top: .9em;
+    font-size: .8em;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+}
+
+dialog {
+    padding: 0 2em;
+    min-width: 20em;
+    min-height: 8em;
+    border-radius: 5px;
+    left: calc(50% - 10em);
+    top: calc(50% - 6em);
+    border: 0;
+    background: #000;
+}
+
+dialog[open=""] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+dialog p {
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: center;
+    font-family: rro;
+    color: #fff;
+}
+
+dialog img {
+    width: 5em;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(5px);
+}
+
+#s_med {
+    display: none;
+}
+
+@media screen and (max-width:1150px) {
+    #req span {
+        font-size: .1em;
+    }
+
+    #show {
+        top: 3.5em;
+    }
+
+    .media span {
+        font-size: .5em;
+    }
+
+    section .right .d div form div {
+        flex-wrap: wrap;
+    }
+
+    section .right .d div form div input {
+        margin: .2em 0;
+        width: 100%;
+    }
+
+    section .right .d div form input[type='email'] {
+        margin: .15em 0;
+    }
+
+    section .right .d div .media {
+        width: 100%;
+        margin: .3em 0;
+    }
+
+    section .right .d div form div.l {
+        margin: .5em 0;
+    }
+
+    #req h3 {
+        font-size: .8em;
+    }
+
+    #req span {
+        font-size: .7em;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    section {
+        flex-direction: column;
+        height: 100vh;
+        padding: 2em;
+        background: var(--lin_bg_s);
+        margin-top: 0;
+    }
+
+    section .left {
+        height: 20%;
+    }
+
+    section .right {
+        height: 80%;
+        margin: 1em 0;
+        background: linear-gradient(transparent, #fff 60%);
+    }
+
+    section :is(.left, .right) {
+        width: 100%;
+    }
+
+    section .left>div {
+        flex-direction: row;
+        padding: 0 1em;
+    }
+
+    section .left>div aside a {
+        margin: 1em 0;
+        padding: 0;
+        font-size: small;
+    }
+
+    section .left>div aside p {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width:645px) {
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    section .left div aside h2 {
+        font-size: 2em;
+    }
+
+    section .left div aside a {
+        margin: .5em 0;
+    }
+
+}
+
+@media screen and (max-width:485px) {
+    section .right .t {
+        margin: .2em 0;
+        padding: .2em 0;
+        place-content: center;
+    }
+
+    section .right {
+        width: 100%;
+        height: 90%;
+    }
+
+    section {
+        padding: 1.5em 0 0 0;
+    }
+
+    section .right .d {
+        width: 100%;
+        margin: 0;
+        background: #fff;
+    }
+
+    section .right .d>div.log {
+        width: 100%;
+        margin: 0;
+    }
+
+    section .right .d>div.log form div {
+        margin: .4em 0;
+    }
+
+    #s_med {
+        display: flex;
+        margin: 1em 0;
+    }
+
+    section .right .d>div h1 {
+        font-size: 1em;
+    }
+
+    section .right .d>div p {
+        font-size: .7em;
+    }
+
+    section .left {
+        height: 10%;
+    }
+
+    section .left div aside span {
+        font-size: 2em;
+    }
+
+    section .left div aside a {
+        font-size: x-small;
+    }
+}
